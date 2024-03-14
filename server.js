@@ -4,7 +4,7 @@ const fs = require('fs');
 const uuid = require('uuid');
 
 const app = express();
-const PORT = 5624;
+const PORT = process.env.PORT || 3000
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'Develop', 'public')));
